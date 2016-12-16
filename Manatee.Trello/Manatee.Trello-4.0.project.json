@@ -1,0 +1,14 @@
+{
+  "frameworks": {
+    ".NETFramework,Version=v4.0,Profile=Client": {}
+  },
+  "runtimes": {
+    "win": {}
+  }, 
+  "buildOptions": {
+    "define": [ "TRACE", "NET4", "JETBRAINS_ANNOTATIONS" ],
+    "optimize": true,
+    "xmlDoc": true,
+    "keyFile": "Manatee.Json.snk" 
+  }
+}

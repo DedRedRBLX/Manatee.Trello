@@ -1,4 +1,5 @@
-﻿using System.Net.NetworkInformation;
+﻿using System;
+using System.Net.NetworkInformation;
 
 namespace Manatee.Trello.Internal.RequestProcessing
 {
@@ -20,19 +21,30 @@ namespace Manatee.Trello.Internal.RequestProcessing
 		static NetworkMonitor()
 		{
 			IsConnected = NetworkInterface.GetIsNetworkAvailable();
+#if IOS
+			NetworkChange.NetworkAddressChanged += HandleNetworkAvailabilityChange;
+#else
 			NetworkChange.NetworkAvailabilityChanged += HandleNetworkAvailabilityChange;
+#endif
 		}
 
+#if IOS
+		private static void HandleNetworkAvailabilityChange(object sender, EventArgs eventArgs)
+		{
+			var isAvailable = NetworkInterface.GetIsNetworkAvailable();
+			if (IsConnected == isAvailable) return;
+			IsConnected = isAvailable;
+			var handler = _connectionStatusChangedInvoker;
+			handler?.Invoke();
+		}
+#else
 		private static void HandleNetworkAvailabilityChange(object sender, NetworkAvailabilityEventArgs e)
 		{
 			if (IsConnected == e.IsAvailable) return;
 			IsConnected = e.IsAvailable;
-#if IOS
-			var handler = _connectionStatusChangedInvoker;
-#else
 			var handler = ConnectionStatusChanged;
-#endif
 			handler?.Invoke();
 		}
+#endif
 	}
 }

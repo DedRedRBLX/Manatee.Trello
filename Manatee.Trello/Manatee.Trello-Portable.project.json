@@ -1,0 +1,14 @@
+{
+  "frameworks": {
+    ".NETPortable,Version=v4.5,Profile=Profile111": {}
+  },
+  "runtimes": {
+    "win": {}
+  },
+  "buildOptions": {
+    "define": [ "TRACE", "IOS", "JETBRAINS_ANNOTATIONS" ],
+    "optimize": true,
+    "xmlDoc": true,
+    "keyFile": "Manatee.Json.snk"
+  }
+}

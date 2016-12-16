@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using Manatee.Trello.Internal;
 
 namespace Manatee.Trello.Internal.Validation
 {
@@ -17,14 +18,14 @@ namespace Manatee.Trello.Internal.Validation
 		private EnumerationRule()
 		{
 			_enumType = typeof (T);
-			if (_enumType.IsGenericType)
+			if (_enumType.TypeInfo().IsGenericType)
 			{
 				if (_enumType.GetGenericTypeDefinition() != typeof(Nullable<>))
 					throw new ArgumentException($"Type {_enumType} must be an enumeration or a nullable enumeration.");
-				_enumType = _enumType.GetGenericArguments().First();
+				_enumType = _enumType.GetTypeArguments().First();
 				_isNullable = true;
 			}
-			if (!_enumType.IsEnum)
+			if (!_enumType.TypeInfo().IsEnum)
 				throw new ArgumentException($"Type {_enumType} must be an enumeration or a nullable enumeration.");
 		}
 

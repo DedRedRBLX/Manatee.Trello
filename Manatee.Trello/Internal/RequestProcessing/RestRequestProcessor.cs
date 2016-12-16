@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Threading;
+#if !NET35
+using System.Threading.Tasks;
+#endif
 using Manatee.Trello.Exceptions;
 using Manatee.Trello.Rest;
 
@@ -37,12 +40,12 @@ namespace Manatee.Trello.Internal.RequestProcessing
 
 		public static void AddRequest(IRestRequest request, object hold)
 		{
-			new Thread(() => Process(c => request.Response = c.Execute(request), request, hold)).Start();
+			StartAsync(() => Process(c => request.Response = c.Execute(request), request, hold));
 		}
 		public static void AddRequest<T>(IRestRequest request, object hold)
 			where T : class
 		{
-			new Thread(() => Process(c => request.Response = c.Execute<T>(request), request, hold)).Start();
+			StartAsync(() => Process(c => request.Response = c.Execute<T>(request), request, hold));
 		}
 		public static void Flush()
 		{
@@ -112,6 +115,14 @@ namespace Manatee.Trello.Internal.RequestProcessing
 		private static void LogResponse(IRestResponse response, string action)
 		{
 			TrelloConfiguration.Log.Info("{0}: {1}", action, response.Content);
+		}
+		private static void StartAsync(System.Action action)
+		{
+#if NET35 || NET4
+			new Thread(() => action()).Start();
+#else
+			Task.Run(action);
+#endif
 		}
 	}
 }

@@ -5,6 +5,7 @@ using System.Globalization;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
+using Manatee.Trello.Internal;
 using Manatee.Trello.Exceptions;
 
 namespace Manatee.Trello.Internal
@@ -35,32 +36,16 @@ namespace Manatee.Trello.Internal
 		{
 			return (beginning.Length > str.Length) || (str.Substring(0, beginning.Length) == beginning);
 		}
-		public static bool IsNullOrWhiteSpace(this string value)
-		{
-#if NET35 || NET35C
-			return string.IsNullOrEmpty(value) || string.IsNullOrEmpty(value.Trim());
-#elif NET4 || NET4C || NET45
-			return string.IsNullOrWhiteSpace(value);
-#endif
-		}
-		public static string Join(this IEnumerable<string> segments, string separator)
-		{
-#if NET35 || NET35C
-			return string.Join(separator, segments.ToArray());
-#elif NET4 || NET4C || NET45
-			return string.Join(separator, segments);
-#endif
-		}
 		public static string GetDescription<T>(this T enumerationValue)
 			where T : struct
 		{
 			var type = enumerationValue.GetType();
-			if (!type.IsEnum)
+			if (!type.TypeInfo().IsEnum)
 				throw new ArgumentException("EnumerationValue must be of Enum type", nameof(enumerationValue));
 
 			EnsureDescriptions<T>();
 
-			var attributes = (typeof(T)).GetCustomAttributes(typeof(FlagsAttribute), false);
+			var attributes = typeof(T).TypeInfo().GetCustomAttributes(typeof(FlagsAttribute), false);
 			return !attributes.Any()
 				? _descriptions[typeof(T)].First(d => Equals(d.Value, enumerationValue)).String
 				: BuildFlagsValues(enumerationValue, ",");
@@ -122,8 +107,8 @@ namespace Manatee.Trello.Internal
 		private static string GetDescription<T>(string name)
 		{
 			var type = typeof(T);
-			var memInfo = type.GetMember(name);
-			var attributes = memInfo[0].GetCustomAttributes(typeof(DescriptionAttribute), false);
+			var memInfo = type.TypeInfo().GetMember(name);
+			var attributes = memInfo[0].GetCustomAttributes(typeof(DescriptionAttribute), false).ToList();
 			return attributes.Any() ? ((DescriptionAttribute)attributes[0]).Description : name;
 		}
 		private static string BuildFlagsValues<T>(T obj, string separator)

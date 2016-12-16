@@ -98,6 +98,7 @@ namespace Manatee.Trello
 		/// <param name="other">An object to compare with this object.</param>
 		public int CompareTo(Position other)
 		{
+			if (other == null) return 0;
 			return Value.CompareTo(other.Value);
 		}
 		/// <summary>
@@ -119,7 +120,11 @@ namespace Manatee.Trello
 		/// <filterpriority>2</filterpriority>
 		public int CompareTo(object obj)
 		{
-			return Value.CompareTo(obj);
+			var other = obj as Position;
+			if (other != null) return CompareTo(other);
+
+			if (!(obj is double)) return 0;
+			return Value.CompareTo((double) obj);
 		}
 		/// <summary>
 		/// Returns a string that represents the current object.

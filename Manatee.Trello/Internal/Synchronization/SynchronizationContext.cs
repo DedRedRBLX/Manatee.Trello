@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+#if !IOS && !CORE
 using System.Timers;
+#endif
 using Manatee.Trello.Internal.RequestProcessing;
 
 namespace Manatee.Trello.Internal.Synchronization
