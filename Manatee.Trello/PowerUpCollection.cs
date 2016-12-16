@@ -14,8 +14,6 @@ namespace Manatee.Trello
 	{
 		internal ReadOnlyPowerUpCollection(Func<string> getOwnerId, TrelloAuthorization auth)
 			: base(getOwnerId, auth) {}
-		internal ReadOnlyPowerUpCollection(ReadOnlyPowerUpCollection source, TrelloAuthorization auth)
-			: this(() => source.OwnerId, auth) {}
 
 		/// <summary>
 		/// Implement to provide data to the collection.

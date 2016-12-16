@@ -7,34 +7,25 @@ namespace Manatee.Trello.Internal.RequestProcessing
 	{
 		public static bool IsConnected { get; private set; }
 
-#if IOS
-		private static System.Action _connectionStatusChangedInvoker;
-
-		public static event System.Action ConnectionStatusChanged
-		{
-			add { _connectionStatusChangedInvoker += value; }
-			remove { _connectionStatusChangedInvoker -= value; }
-		}
-#else
 		public static event System.Action ConnectionStatusChanged;
-#endif
+
 		static NetworkMonitor()
 		{
 			IsConnected = NetworkInterface.GetIsNetworkAvailable();
-#if IOS
+#if IOS || CORE
 			NetworkChange.NetworkAddressChanged += HandleNetworkAvailabilityChange;
 #else
 			NetworkChange.NetworkAvailabilityChanged += HandleNetworkAvailabilityChange;
 #endif
 		}
 
-#if IOS
+#if IOS || CORE
 		private static void HandleNetworkAvailabilityChange(object sender, EventArgs eventArgs)
 		{
 			var isAvailable = NetworkInterface.GetIsNetworkAvailable();
 			if (IsConnected == isAvailable) return;
 			IsConnected = isAvailable;
-			var handler = _connectionStatusChangedInvoker;
+			var handler = ConnectionStatusChanged;
 			handler?.Invoke();
 		}
 #else

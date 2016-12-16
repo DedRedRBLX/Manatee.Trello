@@ -19,8 +19,6 @@ namespace Manatee.Trello
 		{
 			_requestType = requestType;
 		}
-		internal ReadOnlyPowerUpDataCollection(ReadOnlyPowerUpDataCollection source, TrelloAuthorization auth)
-			: this(source._requestType, () => source.OwnerId, auth) {}
 
 		/// <summary>
 		/// Implement to provide data to the collection.
