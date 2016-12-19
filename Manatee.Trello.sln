@@ -10,8 +10,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Manatee.Trello.ManateeJson", "Manatee.Trello.ManateeJson\Manatee.Trello.ManateeJson.csproj", "{FB07603F-BD9B-4CBB-8142-47666C5D88CF}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Manatee.Trello.RestSharp", "Manatee.Trello.RestSharp\Manatee.Trello.RestSharp.csproj", "{BAD3068D-BFFB-4B0D-9826-1DF8295827C9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testing", "Testing", "{29C1914C-949C-4B23-BC09-94D0843D0B1B}"
@@ -52,16 +50,22 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RestSharp", "RestSharp", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApi", "WebApi", "{A51E1AAE-A127-4C22-8CD4-1D4213F4AB00}"
 EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Manatee.Trello.ManateeJson-Core", "Manatee.Trello.ManateeJson\Manatee.Trello.ManateeJson-Core.xproj", "{943BCABC-021D-4EAD-9BEC-C74068EB1165}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Manatee.Trello.ManateeJson-4.0", "Manatee.Trello.ManateeJson\Manatee.Trello.ManateeJson-4.0.csproj", "{C1B29EEE-C2B2-4825-944E-06454A7A9DC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Manatee.Trello.ManateeJson-4.5", "Manatee.Trello.ManateeJson\Manatee.Trello.ManateeJson-4.5.csproj", "{E67F4AF5-D21C-48DF-8741-A8CE3E51F9FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Manatee.Trello.ManateeJson-3.5", "Manatee.Trello.ManateeJson\Manatee.Trello.ManateeJson-3.5.csproj", "{DE523AD4-166B-4762-A6FA-33CA25DF949B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Manatee.Trello.ManateeJson-Portable", "Manatee.Trello.ManateeJson\Manatee.Trello.ManateeJson-Portable.csproj", "{1E78203A-E463-4B5F-B161-9FD4E867DC70}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FB07603F-BD9B-4CBB-8142-47666C5D88CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FB07603F-BD9B-4CBB-8142-47666C5D88CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FB07603F-BD9B-4CBB-8142-47666C5D88CF}.Release|Any CPU.ActiveCfg = Release-Mono|Any CPU
-		{FB07603F-BD9B-4CBB-8142-47666C5D88CF}.Release|Any CPU.Build.0 = Release-Mono|Any CPU
 		{BAD3068D-BFFB-4B0D-9826-1DF8295827C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BAD3068D-BFFB-4B0D-9826-1DF8295827C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BAD3068D-BFFB-4B0D-9826-1DF8295827C9}.Release|Any CPU.ActiveCfg = Release-Mono|Any CPU
@@ -109,12 +113,31 @@ Global
 		{D089ED19-4ABB-4C01-8FAB-72E59F977A1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D089ED19-4ABB-4C01-8FAB-72E59F977A1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D089ED19-4ABB-4C01-8FAB-72E59F977A1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{943BCABC-021D-4EAD-9BEC-C74068EB1165}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{943BCABC-021D-4EAD-9BEC-C74068EB1165}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{943BCABC-021D-4EAD-9BEC-C74068EB1165}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{943BCABC-021D-4EAD-9BEC-C74068EB1165}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1B29EEE-C2B2-4825-944E-06454A7A9DC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1B29EEE-C2B2-4825-944E-06454A7A9DC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1B29EEE-C2B2-4825-944E-06454A7A9DC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1B29EEE-C2B2-4825-944E-06454A7A9DC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E67F4AF5-D21C-48DF-8741-A8CE3E51F9FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E67F4AF5-D21C-48DF-8741-A8CE3E51F9FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E67F4AF5-D21C-48DF-8741-A8CE3E51F9FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E67F4AF5-D21C-48DF-8741-A8CE3E51F9FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE523AD4-166B-4762-A6FA-33CA25DF949B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE523AD4-166B-4762-A6FA-33CA25DF949B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE523AD4-166B-4762-A6FA-33CA25DF949B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE523AD4-166B-4762-A6FA-33CA25DF949B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E78203A-E463-4B5F-B161-9FD4E867DC70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E78203A-E463-4B5F-B161-9FD4E867DC70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E78203A-E463-4B5F-B161-9FD4E867DC70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E78203A-E463-4B5F-B161-9FD4E867DC70}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{FB07603F-BD9B-4CBB-8142-47666C5D88CF} = {B0D60B78-8FEE-47FE-BC27-6CA78F1AAFC0}
 		{BAD3068D-BFFB-4B0D-9826-1DF8295827C9} = {E116E392-EE3A-4DD7-99CD-BE21138C9214}
 		{9F9A1703-6B8A-4808-B1C5-6694EBE1640A} = {29C1914C-949C-4B23-BC09-94D0843D0B1B}
 		{7E4E2A3D-4EB0-4C65-9CB5-EA70D46D8BBA} = {29C1914C-949C-4B23-BC09-94D0843D0B1B}
@@ -130,6 +153,11 @@ Global
 		{D089ED19-4ABB-4C01-8FAB-72E59F977A1F} = {C2EBC27B-555A-4732-9466-E33B1D486A32}
 		{E116E392-EE3A-4DD7-99CD-BE21138C9214} = {60723F91-AE45-46A2-AD5C-68B7E21ABA50}
 		{A51E1AAE-A127-4C22-8CD4-1D4213F4AB00} = {60723F91-AE45-46A2-AD5C-68B7E21ABA50}
+		{943BCABC-021D-4EAD-9BEC-C74068EB1165} = {B0D60B78-8FEE-47FE-BC27-6CA78F1AAFC0}
+		{C1B29EEE-C2B2-4825-944E-06454A7A9DC6} = {B0D60B78-8FEE-47FE-BC27-6CA78F1AAFC0}
+		{E67F4AF5-D21C-48DF-8741-A8CE3E51F9FF} = {B0D60B78-8FEE-47FE-BC27-6CA78F1AAFC0}
+		{DE523AD4-166B-4762-A6FA-33CA25DF949B} = {B0D60B78-8FEE-47FE-BC27-6CA78F1AAFC0}
+		{1E78203A-E463-4B5F-B161-9FD4E867DC70} = {B0D60B78-8FEE-47FE-BC27-6CA78F1AAFC0}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Manatee.Trello\Manatee.Trello.csproj

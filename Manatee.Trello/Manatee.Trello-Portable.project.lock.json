@@ -1,0 +1,15 @@
+{
+  "locked": false,
+  "version": 2,
+  "targets": {
+    ".NETPortable,Version=v4.5,Profile=Profile111": {},
+    ".NETPortable,Version=v4.5,Profile=Profile111/win": {}
+  },
+  "libraries": {},
+  "projectFileDependencyGroups": {
+    "": [],
+    ".NETPortable,Version=v4.5,Profile=Profile111": []
+  },
+  "tools": {},
+  "projectFileToolGroups": {}
+}

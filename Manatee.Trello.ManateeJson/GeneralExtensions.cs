@@ -17,17 +17,17 @@ namespace Manatee.Trello.ManateeJson
 		}
 		public static bool IsNullOrWhiteSpace(this string value)
 		{
-#if NET35 || NET35C
+#if NET35
 			return string.IsNullOrEmpty(value) || string.IsNullOrEmpty(value.Trim());
-#elif NET4 || NET4C || NET45
+#else
 			return string.IsNullOrWhiteSpace(value);
 #endif
 		}
 		public static string Join(this IEnumerable<string> segments, string separator)
 		{
-#if NET35 || NET35C
+#if NET35
 			return string.Join(separator, segments.ToArray());
-#elif NET4 || NET4C || NET45
+#else
 			return string.Join(separator, segments);
 #endif
 		}
