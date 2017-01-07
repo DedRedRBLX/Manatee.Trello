@@ -96,8 +96,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Manatee.Json">
-      <HintPath>..\packages\Manatee.Json.5.2.0.1\lib\portable-net45+wp8+win8\Manatee.Json.dll</HintPath>
+    <Reference Include="Manatee.Json, Version=5.0.0.0, Culture=neutral, PublicKeyToken=c267f67a39449c62, processorArchitecture=MSIL">
+      <HintPath>..\packages\Manatee.Json.5.2.0.1\lib\portable-net45+netcore45+wpa81\Manatee.Json.dll</HintPath>
+      <Private>True</Private>
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
