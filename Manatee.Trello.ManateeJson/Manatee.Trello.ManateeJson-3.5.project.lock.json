@@ -2,12 +2,13 @@
   "locked": false,
   "version": 2,
   "targets": {
-    ".NETPortable,Version=v4.5,Profile=Profile111": {}
+    ".NETFramework,Version=v3.5,Profile=Client": {},
+    ".NETFramework,Version=v3.5,Profile=Client/win": {}
   },
   "libraries": {},
   "projectFileDependencyGroups": {
     "": [],
-    ".NETPortable,Version=v4.5,Profile=Profile111": []
+    ".NETFramework,Version=v3.5,Profile=Client": []
   },
   "tools": {},
   "projectFileToolGroups": {}

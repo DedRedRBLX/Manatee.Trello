@@ -10,6 +10,6 @@
     "define": [ "TRACE", "NET45", "JETBRAINS_ANNOTATIONS" ],
     "optimize": true,
     "xmlDoc": true,
-    "keyFile": "Manatee.Trello.snk"
+    "keyFile": "Manatee.Json.snk"
   }
 }

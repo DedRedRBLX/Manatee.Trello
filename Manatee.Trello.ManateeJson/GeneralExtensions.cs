@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 using Manatee.Json;
 using Manatee.Json.Serialization;
@@ -14,22 +12,6 @@ namespace Manatee.Trello.ManateeJson
 		public static string ToLowerString<T>(this T item)
 		{
 			return item.ToString().ToLower();
-		}
-		public static bool IsNullOrWhiteSpace(this string value)
-		{
-#if NET35
-			return string.IsNullOrEmpty(value) || string.IsNullOrEmpty(value.Trim());
-#else
-			return string.IsNullOrWhiteSpace(value);
-#endif
-		}
-		public static string Join(this IEnumerable<string> segments, string separator)
-		{
-#if NET35
-			return string.Join(separator, segments.ToArray());
-#else
-			return string.Join(separator, segments);
-#endif
 		}
 		public static T Deserialize<T>(this JsonObject obj, JsonSerializer serializer, string key)
 		{
@@ -60,41 +42,5 @@ namespace Manatee.Trello.ManateeJson
 			if (!Equals(obj, default(T)))
 				json[key] = obj.Id;
 		}
-#if IOS
-		// source for these two methods: http://www.kevinwilliampang.com/2008/09/20/mapping-enums-to-strings-and-strings-to-enums-in-net/
-		public static string ToDescription(this Enum value)
-		{
-			try
-			{
-				var type = value.GetType();
-				var field = type.GetField(value.ToString());
-				var da = (DescriptionAttribute[]) field.GetCustomAttributes(typeof (DescriptionAttribute), false);
-				return da.Length > 0 ? da[0].Description : value.ToString();
-			}
-			catch (Exception e)
-			{
-				Console.WriteLine(e);
-				throw;
-			}
-		}
-		public static T ToEnum<T>(this string stringValue, T defaultValue = default (T))
-		{
-			foreach (T enumValue in Enum.GetValues(typeof (T)))
-			{
-				var type = typeof (T);
-				var field = type.GetField(enumValue.ToString());
-				var da = (DescriptionAttribute[]) field.GetCustomAttributes(typeof (DescriptionAttribute), false);
-				if (da.Length > 0 && da[0].Description == stringValue) return enumValue;
-			}
-			return defaultValue;
-		}
-#else
-		public static T Combine<T>(this IEnumerable<T> values)
-			where T : struct
-		{
-			return (T) Enum.ToObject(typeof (T), values.Select(value => Convert.ToInt32(value))
-													   .Aggregate(0, (current, longValue) => current + longValue));
-		}
-#endif
 	}
 }

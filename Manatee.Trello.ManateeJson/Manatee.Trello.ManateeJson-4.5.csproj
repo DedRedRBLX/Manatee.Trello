@@ -38,7 +38,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Manatee.Json, Version=5.0.0.0, Culture=neutral, PublicKeyToken=c267f67a39449c62, processorArchitecture=MSIL">
-      <HintPath>..\packages\Manatee.Json.5.2.0.1\lib\net45\Manatee.Json.dll</HintPath>
+      <HintPath>..\packages\Manatee.Json.5.2.0.2\lib\net45\Manatee.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CompatibilityExtensions.cs" />
     <Compile Include="Entities\ManateeAction.cs" />
     <Compile Include="Entities\ManateeActionData.cs" />
     <Compile Include="Entities\ManateeActionOldData.cs" />

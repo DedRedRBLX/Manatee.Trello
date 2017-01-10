@@ -6,9 +6,9 @@
     "win": {}
   },
   "buildOptions": {
-    "define": [ "TRACE", "NET35", "JETBRAINS_ANNOTATIONS" ],
+    "define": [ "TRACE", "NET35" ],
     "optimize": true,
     "xmlDoc": true,
-    "keyFile": "Manatee.Trello.snk"
+    "keyFile": "Manatee.Json.snk"
   }
 }
