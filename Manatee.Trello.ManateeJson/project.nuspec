@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+	<metadata>
+		<id>Manatee.Trello.ManateeJson</id>
+		<version>1.7.0.1</version>
+		<description>
+			A JSON serializer implementation for Manatee.Trello, backed by Manatee.Json.
+		</description>
+		<authors>gregsdennis</authors>
+		<copyright>Copyright © 2017 Little Crab Solutions</copyright>
+		<projectUrl>https://github.com/gregsdennis/Manatee.Trello</projectUrl>
+		<licenseUrl>https://github.com/gregsdennis/Manatee.Trello/blob/master/LICENSE.txt</licenseUrl>
+		<iconUrl>https://bytebucket.org/gregsdennis/manatee.trello/wiki/Resources/Manatee-Trello-Icon.png</iconUrl>
+		<releaseNotes>
+v1.7.0.x
+Repackaged
+
+v1.7.0
+Added ActionData.Plugin to comply with Manatee.Trello v1.15.0.
+
+v1.6.0
+Added Card.DueComplete to comply with Manatee.Trello v1.14.0.
+
+v1.5.3
+Updated Manatee.Json dependency to 5.0.0.
+
+v1.5.2
+BUG FIX: Inconsistent Date/Time formatting.
+
+v1.5.1
+Trello changed their dates from EST to UTC.  This fixes the fallout from that change.
+
+v1.5.0
+Added IsPartial to searches for matching "starts with" text.
+		</releaseNotes>
+		<tags>wrapper trello manatee json</tags>
+	</metadata>
+	<files>
+		<file src="bin\Release-3.5\Manatee.Trello.ManateeJson.dll" target="lib\net35-client"/>
+		<file src="bin\Release-3.5\Manatee.Trello.ManateeJson.pdb" target="lib\net35-client"/>
+		<file src="bin\Release-3.5\Manatee.Trello.ManateeJson.xml" target="lib\net35-client"/>
+		<file src="bin\Release-4.0\Manatee.Trello.ManateeJson.dll" target="lib\net40-client"/>
+		<file src="bin\Release-4.0\Manatee.Trello.ManateeJson.pdb" target="lib\net40-client"/>
+		<file src="bin\Release-4.0\Manatee.Trello.ManateeJson.xml" target="lib\net40-client"/>
+		<file src="bin\Release-4.5\Manatee.Trello.ManateeJson.dll" target="lib\net45"/>
+		<file src="bin\Release-4.5\Manatee.Trello.ManateeJson.pdb" target="lib\net45"/>
+		<file src="bin\Release-4.5\Manatee.Trello.ManateeJson.xml" target="lib\net45"/>
+		<file src="bin\Release\netstandard1.6\Manatee.Trello.ManateeJson.dll" target="lib\netstandard1.6"/>
+		<file src="bin\Release\netstandard1.6\Manatee.Trello.ManateeJson.pdb" target="lib\netstandard1.6"/>
+		<file src="bin\Release\netstandard1.6\Manatee.Trello.ManateeJson.xml" target="lib\netstandard1.6"/>
+		<file src="bin\Release-Portable\Manatee.Trello.ManateeJson.dll" target="lib\MonoAndroid"/>
+		<file src="bin\Release-Portable\Manatee.Trello.ManateeJson.pdb" target="lib\MonoAndroid"/>
+		<file src="bin\Release-Portable\Manatee.Trello.ManateeJson.xml" target="lib\MonoAndroid"/>
+		<file src="bin\Release-Portable\Manatee.Trello.ManateeJson.dll" target="lib\MonoMac"/>
+		<file src="bin\Release-Portable\Manatee.Trello.ManateeJson.pdb" target="lib\MonoMac"/>
+		<file src="bin\Release-Portable\Manatee.Trello.ManateeJson.xml" target="lib\MonoMac"/>
+		<file src="bin\Release-Portable\Manatee.Trello.ManateeJson.dll" target="lib\MonoTouch"/>
+		<file src="bin\Release-Portable\Manatee.Trello.ManateeJson.pdb" target="lib\MonoTouch"/>
+		<file src="bin\Release-Portable\Manatee.Trello.ManateeJson.xml" target="lib\MonoTouch"/>
+		<file src="bin\Release-Portable\Manatee.Trello.ManateeJson.dll" target="lib\portable-net45+netcore45+wpa81"/>
+		<file src="bin\Release-Portable\Manatee.Trello.ManateeJson.pdb" target="lib\portable-net45+netcore45+wpa81"/>
+		<file src="bin\Release-Portable\Manatee.Trello.ManateeJson.xml" target="lib\portable-net45+netcore45+wpa81"/>
+	</files>
+</package>

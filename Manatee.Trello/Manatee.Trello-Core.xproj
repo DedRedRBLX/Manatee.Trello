@@ -6,7 +6,7 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.Props" Condition="'$(VSToolsPath)' != ''" />
   <PropertyGroup Label="Globals">
-    <ProjectGuid>d089ed19-4abb-4c01-8fab-72e59f977a1f</ProjectGuid>
+    <ProjectGuid>151e94a8-deb6-49ce-af7d-c151a45f188f</ProjectGuid>
     <RootNamespace>Manatee.Trello</RootNamespace>
     <BaseIntermediateOutputPath Condition="'$(BaseIntermediateOutputPath)'=='' ">.\obj</BaseIntermediateOutputPath>
     <OutputPath Condition="'$(OutputPath)'=='' ">.\bin\</OutputPath>

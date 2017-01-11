@@ -1,7 +1,8 @@
 {
+  "version": "1.0.0-*",
   "dependencies": {
     "Manatee.Json": "5.2.0.2",
-    "Manatee.Trello": "1.0.0-*",
+    "Manatee.Trello": "1.15.0.1",
     "NETStandard.Library": "1.6.0"
   },
   "frameworks": {

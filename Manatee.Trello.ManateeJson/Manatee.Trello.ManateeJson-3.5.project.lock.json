@@ -2,12 +2,120 @@
   "locked": false,
   "version": 2,
   "targets": {
-    ".NETFramework,Version=v3.5,Profile=Client": {},
-    ".NETFramework,Version=v3.5,Profile=Client/win": {}
+    ".NETFramework,Version=v3.5,Profile=Client": {
+      "Manatee.Json/5.2.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net35-client/Manatee.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net35-client/Manatee.Json.dll": {}
+        }
+      },
+      "Manatee.Trello/1.15.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net35-client/Manatee.Trello.dll": {}
+        },
+        "runtime": {
+          "lib/net35-client/Manatee.Trello.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v3.5,Profile=Client/win": {
+      "Manatee.Json/5.2.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net35-client/Manatee.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net35-client/Manatee.Json.dll": {}
+        }
+      },
+      "Manatee.Trello/1.15.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net35-client/Manatee.Trello.dll": {}
+        },
+        "runtime": {
+          "lib/net35-client/Manatee.Trello.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Manatee.Json/5.2.0.2": {
+      "sha512": "cVq5AgJ4F9Bk3qdTrUQVBz7Nahrdu7phefVSRFywgYjMAF4cb8g06V3dVkx3koAaPwUPyzxl8zf4AeSwi6xy/g==",
+      "type": "package",
+      "path": "Manatee.Json/5.2.0.2",
+      "files": [
+        "Manatee.Json.5.2.0.2.nupkg.sha512",
+        "Manatee.Json.nuspec",
+        "lib/MonoAndroid/Manatee.Json.XML",
+        "lib/MonoAndroid/Manatee.Json.dll",
+        "lib/MonoAndroid/Manatee.Json.pdb",
+        "lib/MonoMac/Manatee.Json.XML",
+        "lib/MonoMac/Manatee.Json.dll",
+        "lib/MonoMac/Manatee.Json.pdb",
+        "lib/MonoTouch/Manatee.Json.XML",
+        "lib/MonoTouch/Manatee.Json.dll",
+        "lib/MonoTouch/Manatee.Json.pdb",
+        "lib/net35-client/Manatee.Json.XML",
+        "lib/net35-client/Manatee.Json.dll",
+        "lib/net35-client/Manatee.Json.pdb",
+        "lib/net40-client/Manatee.Json.dll",
+        "lib/net40-client/Manatee.Json.pdb",
+        "lib/net40-client/Manatee.Json.xml",
+        "lib/net45/Manatee.Json.XML",
+        "lib/net45/Manatee.Json.dll",
+        "lib/net45/Manatee.Json.pdb",
+        "lib/netstandard1.6/Manatee.Json.dll",
+        "lib/netstandard1.6/Manatee.Json.pdb",
+        "lib/netstandard1.6/Manatee.Json.xml",
+        "lib/portable-net45+netcore45+wpa81/Manatee.Json.XML",
+        "lib/portable-net45+netcore45+wpa81/Manatee.Json.dll",
+        "lib/portable-net45+netcore45+wpa81/Manatee.Json.pdb"
+      ]
+    },
+    "Manatee.Trello/1.15.0.1": {
+      "sha512": "7I7M9oUTK1Ki460b3aM5EKDH1ucJ/ahkIpWDtdxUfn6gxSrXIT3BLGJbu8RSKb0m/OHZPmWxtLhAHTOAioZTIA==",
+      "type": "package",
+      "path": "Manatee.Trello/1.15.0.1",
+      "files": [
+        "Manatee.Trello.1.15.0.1.nupkg.sha512",
+        "Manatee.Trello.nuspec",
+        "lib/MonoAndroid/Manatee.Trello.XML",
+        "lib/MonoAndroid/Manatee.Trello.dll",
+        "lib/MonoAndroid/Manatee.Trello.pdb",
+        "lib/MonoMac/Manatee.Trello.XML",
+        "lib/MonoMac/Manatee.Trello.dll",
+        "lib/MonoMac/Manatee.Trello.pdb",
+        "lib/MonoTouch/Manatee.Trello.XML",
+        "lib/MonoTouch/Manatee.Trello.dll",
+        "lib/MonoTouch/Manatee.Trello.pdb",
+        "lib/net35-client/Manatee.Trello.XML",
+        "lib/net35-client/Manatee.Trello.dll",
+        "lib/net35-client/Manatee.Trello.pdb",
+        "lib/net40-client/Manatee.Trello.XML",
+        "lib/net40-client/Manatee.Trello.dll",
+        "lib/net40-client/Manatee.Trello.pdb",
+        "lib/net45/Manatee.Trello.dll",
+        "lib/net45/Manatee.Trello.pdb",
+        "lib/net45/Manatee.Trello.xml",
+        "lib/netstandard1.6/Manatee.Trello.dll",
+        "lib/netstandard1.6/Manatee.Trello.pdb",
+        "lib/netstandard1.6/Manatee.Trello.xml",
+        "lib/portable-net45+netcore45+wpa81/Manatee.Trello.XML",
+        "lib/portable-net45+netcore45+wpa81/Manatee.Trello.dll",
+        "lib/portable-net45+netcore45+wpa81/Manatee.Trello.pdb"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    "": [],
+    "": [
+      "Manatee.Json >= 5.2.0.2",
+      "Manatee.Trello >= 1.15.0.1"
+    ],
     ".NETFramework,Version=v3.5,Profile=Client": []
   },
   "tools": {},

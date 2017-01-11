@@ -1,4 +1,4 @@
-{
+﻿{
   "frameworks": {
     ".NETFramework,Version=v3.5,Profile=Client": {}
   },
@@ -6,9 +6,16 @@
     "win": {}
   },
   "buildOptions": {
-    "define": [ "TRACE", "NET35" ],
+    "define": [
+      "TRACE",
+      "NET35"
+    ],
     "optimize": true,
     "xmlDoc": true,
-    "keyFile": "Manatee.Json.snk"
+    "keyFile": "Manatee.Trello.ManateeJson.snk"
+  },
+  "dependencies": {
+    "Manatee.Json": "5.2.0.2",
+    "Manatee.Trello": "1.15.0.1"
   }
 }

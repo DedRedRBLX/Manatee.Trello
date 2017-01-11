@@ -1238,20 +1238,6 @@
           "NETStandard.Library": "1.6.0",
           "System.Net.NetworkInformation": "4.3.0"
         }
-      },
-      "Manatee.Trello-Core/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v1.6",
-        "dependencies": {
-          "NETStandard.Library": "1.6.0",
-          "System.Net.NetworkInformation": "4.3.0"
-        },
-        "compile": {
-          "netstandard1.6/Manatee.Trello-Core.dll": {}
-        },
-        "runtime": {
-          "netstandard1.6/Manatee.Trello-Core.dll": {}
-        }
       }
     }
   },
@@ -4536,17 +4522,12 @@
     "Manatee.Trello/1.0.0": {
       "type": "project",
       "path": "../Manatee.Trello/project.json"
-    },
-    "Manatee.Trello-Core/1.0.0": {
-      "type": "project",
-      "path": "../Manatee.Trello/project.json",
-      "msbuildProject": "../Manatee.Trello/Manatee.Trello-Core.xproj"
     }
   },
   "projectFileDependencyGroups": {
     "": [
       "Manatee.Json >= 5.2.0.2",
-      "Manatee.Trello >= 1.0.0-*",
+      "Manatee.Trello >= 1.15.0.1",
       "NETStandard.Library >= 1.6.0"
     ],
     ".NETStandard,Version=v1.6": []

@@ -1,6 +1,10 @@
-{
+﻿{
   "supports": {},
   "frameworks": {
     ".NETPortable,Version=v4.5,Profile=Profile111": {}
+  },
+  "dependencies": {
+    "Manatee.Json": "5.2.0.2",
+    "Manatee.Trello": "1.15.0.1"
   }
 }

@@ -1,4 +1,4 @@
-{
+﻿{
   "frameworks": {
     ".NETFramework,Version=v4.0": {},
     ".NETFramework,Version=v4.5": {}
@@ -7,9 +7,17 @@
     "win": {}
   },
   "buildOptions": {
-    "define": [ "TRACE", "NET45", "JETBRAINS_ANNOTATIONS" ],
+    "define": [
+      "TRACE",
+      "NET45",
+      "JETBRAINS_ANNOTATIONS"
+    ],
     "optimize": true,
     "xmlDoc": true,
     "keyFile": "Manatee.Json.snk"
+  },
+  "dependencies": {
+    "Manatee.Json": "5.2.0.2",
+    "Manatee.Trello": "1.15.0.1"
   }
 }
