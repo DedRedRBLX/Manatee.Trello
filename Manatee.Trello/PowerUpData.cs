@@ -5,14 +5,26 @@ using Manatee.Trello.Json;
 
 namespace Manatee.Trello
 {
+	/// <summary>
+	/// Provides the data supplied by the power-up.
+	/// </summary>
 	public class PowerUpData : ICacheable
 	{
 		private readonly Field<string> _pluginId;
 		private readonly Field<string> _value;
 		private readonly PowerUpDataContext _context;
 
+		/// <summary>
+		/// The ID of the data instance.
+		/// </summary>
 		public string Id { get; }
+		/// <summary>
+		/// The ID of the power-up.
+		/// </summary>
 		public string PluginId => _pluginId.Value;
+		/// <summary>
+		/// The value of the data.
+		/// </summary>
 		public string Value => _value.Value;
 
 		internal IJsonPowerUpData Json

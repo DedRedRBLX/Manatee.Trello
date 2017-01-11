@@ -129,6 +129,11 @@ namespace Manatee.Trello
 			RegisteredPowerUps = new Dictionary<string, Func<IJsonPowerUp, TrelloAuthorization, IPowerUp>>();
 		}
 
+		/// <summary>
+		/// Registers a power-up implementation.
+		/// </summary>
+		/// <param name="id">The ID of the power-up.</param>
+		/// <param name="factory">A factory function to build instances of the power-up.</param>
 		public static void RegisterPowerUp(string id, Func<IJsonPowerUp, TrelloAuthorization, IPowerUp> factory)
 		{
 			RegisteredPowerUps[id] = factory;
