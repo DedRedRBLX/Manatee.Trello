@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+	<metadata>
+		<id>Manatee.Trello</id>
+		<version>1.15.0.1</version>
+		<description>
+			A fully object-oriented .Net wrapper for Trello's RESTful API.
+		</description>
+		<authors>gregsdennis</authors>
+		<copyright>Copyright © 2017 Little Crab Solutions</copyright>
+		<projectUrl>https://github.com/gregsdennis/Manatee.Trello</projectUrl>
+		<licenseUrl>https://github.com/gregsdennis/Manatee.Trello/blob/master/LICENSE.txt</licenseUrl>
+		<iconUrl>https://bytebucket.org/gregsdennis/manatee.trello/wiki/Resources/Manatee-Trello-Icon.png</iconUrl>
+		<releaseNotes>
+Please be sure to read the wiki pages at https://github.com/gregsdennis/Manatee.Trello/wiki.  Faeedback and questions are welcome through GitHub, on StackOverflow, or by emailing littlecrabsolutions@yahoo.com.
+
+v1.15.0.1
+Repackaged
+
+v1.15.0
+BUG FIX: Trello added new action types for enabling and disabling plugins. (#55)
+
+v1.14.1
+BUG FIX: CollectionExtensions.Limit() should be an extension method.
+
+v1.14.0
+Added Card.IsComplete to indicate that a card is complete. (Checkbox next to due date in Trello UI.)
+Updated CardCollection.Add() to allow initialization of all properties allowed by API.
+BUG FIX: Card.DueDate = DateTime.MinDate throws error.
+
+v1.13.0
+Added Trello Power-Ups platform basis.  Check for other Manatee.Trello.* packages for power-up implementations.
+
+v1.12.0
+Added Card.VotingMembers.
+Updated date/time serialization logic (EST to UTC) to support Trello change.
+BUG FIX: AttachmentCollection throws when adding via URL.
+		</releaseNotes>
+		<tags>wrapper trello manatee</tags>
+	</metadata>
+	<files>
+		<file src="bin\Release-3.5\Manatee.Trello.dll" target="lib\net35-client"/>
+		<file src="bin\Release-3.5\Manatee.Trello.pdb" target="lib\net35-client"/>
+		<file src="bin\Release-3.5\Manatee.Trello.xml" target="lib\net35-client"/>
+		<file src="bin\Release-4.0\Manatee.Trello.dll" target="lib\net40-client"/>
+		<file src="bin\Release-4.0\Manatee.Trello.pdb" target="lib\net40-client"/>
+		<file src="bin\Release-4.0\Manatee.Trello.xml" target="lib\net40-client"/>
+		<file src="bin\Release-4.5\Manatee.Trello.dll" target="lib\net45"/>
+		<file src="bin\Release-4.5\Manatee.Trello.pdb" target="lib\net45"/>
+		<file src="bin\Release-4.5\Manatee.Trello.xml" target="lib\net45"/>
+		<file src="bin\Release\netstandard1.6\Manatee.Trello.dll" target="lib\netstandard1.6"/>
+		<file src="bin\Release\netstandard1.6\Manatee.Trello.pdb" target="lib\netstandard1.6"/>
+		<file src="bin\Release\netstandard1.6\Manatee.Trello.xml" target="lib\netstandard1.6"/>
+		<file src="bin\Release-Portable\Manatee.Trello.dll" target="lib\MonoAndroid"/>
+		<file src="bin\Release-Portable\Manatee.Trello.pdb" target="lib\MonoAndroid"/>
+		<file src="bin\Release-Portable\Manatee.Trello.xml" target="lib\MonoAndroid"/>
+		<file src="bin\Release-Portable\Manatee.Trello.dll" target="lib\MonoMac"/>
+		<file src="bin\Release-Portable\Manatee.Trello.pdb" target="lib\MonoMac"/>
+		<file src="bin\Release-Portable\Manatee.Trello.xml" target="lib\MonoMac"/>
+		<file src="bin\Release-Portable\Manatee.Trello.dll" target="lib\MonoTouch"/>
+		<file src="bin\Release-Portable\Manatee.Trello.pdb" target="lib\MonoTouch"/>
+		<file src="bin\Release-Portable\Manatee.Trello.xml" target="lib\MonoTouch"/>
+		<file src="bin\Release-Portable\Manatee.Trello.dll" target="lib\portable-net45+netcore45+wpa81"/>
+		<file src="bin\Release-Portable\Manatee.Trello.pdb" target="lib\portable-net45+netcore45+wpa81"/>
+		<file src="bin\Release-Portable\Manatee.Trello.xml" target="lib\portable-net45+netcore45+wpa81"/>
+	</files>
+</package>
