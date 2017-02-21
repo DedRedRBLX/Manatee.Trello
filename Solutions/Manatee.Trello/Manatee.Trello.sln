@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Manatee.Trello-3.5", "..\..\Manatee.Trello\Manatee.Trello-3.5.csproj", "{67AF2057-326F-4772-9502-F0ADBA7538ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Manatee.Trello-4.0", "..\..\Manatee.Trello\Manatee.Trello-4.0.csproj", "{BA0D34FA-19E7-469F-8275-EE62B5DA85C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Manatee.Trello-4.5", "..\..\Manatee.Trello\Manatee.Trello-4.5.csproj", "{ED057DBB-B864-48B6-A916-D2FB1A035D97}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BEE86451-E0E5-4886-B419-7FC306BC91DF} = {BEE86451-E0E5-4886-B419-7FC306BC91DF}
+		{67AF2057-326F-4772-9502-F0ADBA7538ED} = {67AF2057-326F-4772-9502-F0ADBA7538ED}
+		{151E94A8-DEB6-49CE-AF7D-C151A45F188F} = {151E94A8-DEB6-49CE-AF7D-C151A45F188F}
+		{BA0D34FA-19E7-469F-8275-EE62B5DA85C9} = {BA0D34FA-19E7-469F-8275-EE62B5DA85C9}
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Manatee.Trello-Core", "..\..\Manatee.Trello\Manatee.Trello-Core.xproj", "{151E94A8-DEB6-49CE-AF7D-C151A45F188F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Manatee.Trello-Portable", "..\..\Manatee.Trello\Manatee.Trello-Portable.csproj", "{BEE86451-E0E5-4886-B419-7FC306BC91DF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{67AF2057-326F-4772-9502-F0ADBA7538ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67AF2057-326F-4772-9502-F0ADBA7538ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67AF2057-326F-4772-9502-F0ADBA7538ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67AF2057-326F-4772-9502-F0ADBA7538ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA0D34FA-19E7-469F-8275-EE62B5DA85C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA0D34FA-19E7-469F-8275-EE62B5DA85C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA0D34FA-19E7-469F-8275-EE62B5DA85C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA0D34FA-19E7-469F-8275-EE62B5DA85C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED057DBB-B864-48B6-A916-D2FB1A035D97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED057DBB-B864-48B6-A916-D2FB1A035D97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED057DBB-B864-48B6-A916-D2FB1A035D97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED057DBB-B864-48B6-A916-D2FB1A035D97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{151E94A8-DEB6-49CE-AF7D-C151A45F188F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{151E94A8-DEB6-49CE-AF7D-C151A45F188F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{151E94A8-DEB6-49CE-AF7D-C151A45F188F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{151E94A8-DEB6-49CE-AF7D-C151A45F188F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEE86451-E0E5-4886-B419-7FC306BC91DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEE86451-E0E5-4886-B419-7FC306BC91DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEE86451-E0E5-4886-B419-7FC306BC91DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEE86451-E0E5-4886-B419-7FC306BC91DF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Manatee.Trello\Manatee.Trello.csproj
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Manatee.Trello.vsmdi
+	EndGlobalSection
+EndGlobal
