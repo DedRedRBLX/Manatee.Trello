@@ -1,0 +1,22 @@
+{
+  "version": "1.0.0-*",
+
+  "dependencies": {
+    "Manatee.Trello": "1.15.0.1",
+    "Microsoft.AspNet.WebApi": "5.2.3",
+    "NETStandard.Library": "1.6.1"
+  },
+
+  "frameworks": {
+    "netstandard1.6": {
+      "imports": [
+        "dnxcore50",
+        "net45"
+      ]
+    }
+  },
+  "buildOptions": {
+    "define": [ "TRACE", "CORE" ],
+    "xmlDoc": true
+  }
+}
