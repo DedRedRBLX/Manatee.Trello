@@ -4,7 +4,7 @@
   "dependencies": {
     "Manatee.Trello": "1.15.0.1",
     "Microsoft.AspNet.WebApi": "5.2.3",
-    "NETStandard.Library": "1.6.1"
+    "NETStandard.Library": "1.6.1",
   },
 
   "frameworks": {
@@ -15,6 +15,7 @@
       ]
     }
   },
+
   "buildOptions": {
     "define": [ "TRACE", "CORE" ],
     "xmlDoc": true
